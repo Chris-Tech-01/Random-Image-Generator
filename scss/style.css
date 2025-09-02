@@ -51,7 +51,8 @@ h3, h4 {
 
 /* A elements that don't have a class get default styles */
 a:not([class]) {
-  text-decoration-skip-ink: auto;
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
   color: currentColor;
 }
 
@@ -195,6 +196,11 @@ form {
   box-shadow: 0 0 5px rgba(15, 118, 110, 0.5);
 }
 
+input::-moz-placeholder {
+  text-align: center;
+  color: #333333;
+}
+
 input::placeholder {
   text-align: center;
   color: #333333;
@@ -224,7 +230,8 @@ input::placeholder {
 
 .email-heading {
   font-size: 1.3rem;
-  text-decoration: 2px solid #3498DB;
+  -webkit-text-decoration: 2px solid #3498DB;
+          text-decoration: 2px solid #3498DB;
   margin: 20px 0;
   text-align: center;
   color: #1A1A1A;
@@ -232,9 +239,11 @@ input::placeholder {
 
 img {
   padding: 5px;
+  margin: 0 auto;
   height: 300px;
   width: 300px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .input-area {
@@ -269,7 +278,6 @@ img {
 
 .email-images {
   display: flex;
-  justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
 }
@@ -282,6 +290,4 @@ img {
     justify-content: center;
     flex-wrap: wrap;
   }
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
