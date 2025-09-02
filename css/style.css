@@ -1,0 +1,286 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-size: 1rem;
+  letter-spacing: 0.4px;
+  margin: 0;
+}
+
+h1 {
+  margin: 0;
+}
+
+h3 {
+  margin: 0;
+}
+
+.section {
+  padding: 50px 0px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1260px) {
+  .container {
+    width: 1200px;
+  }
+}
+
+.page-container {
+  min-height: 100%;
+  width: 100%;
+  padding: 20px;
+  background-color: #E1E5EA;
+}
+@media (min-width: 992px) {
+  .page-container {
+    padding: 40px;
+  }
+}
+
+h1 {
+  font-size: 1.7rem;
+  padding: 20px 0 40px 0;
+  text-align: center;
+  color: #1A1A1A;
+}
+
+h2 {
+  font-size: 1.4rem;
+  margin: 0 0 20px 0;
+  text-align: center;
+}
+
+form {
+  height: 100%;
+  width: 100%;
+}
+
+.box-style {
+  padding: 30px;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #F1F0DE;
+}
+
+.input-area {
+  width: 100%;
+  max-width: 594px;
+  margin: 0 auto;
+}
+
+.output-area {
+  min-width: 100%;
+  margin-top: 40px;
+  align-content: center;
+}
+
+.enter-email {
+  width: 300px;
+  margin: 20px 0;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
+.enter-email:focus {
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 5px rgba(15, 118, 110, 0.5);
+}
+
+input::placeholder {
+  text-align: center;
+  color: #333333;
+}
+
+.btn {
+  font-size: 0.9rem;
+  width: 150px;
+  margin: 5px;
+  padding: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  color: #0F766E;
+}
+
+.email-section {
+  width: 293px;
+  padding: 10px;
+  margin: 10px 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+@media (min-width: 992px) {
+  .email-section {
+    width: 640px;
+  }
+}
+
+.email-heading {
+  font-size: 1.3rem;
+  text-decoration: 2px solid #3498DB;
+  margin: 20px 0;
+  text-align: center;
+  color: #1A1A1A;
+}
+
+img {
+  padding: 5px;
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+}
+
+.input-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.output-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.email-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.email-images {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 768px) {
+  #gallery {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

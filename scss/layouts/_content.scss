@@ -1,0 +1,155 @@
+@use "../base" as *;
+@use "../utilities" as *;
+@use "../vendors" as *;
+
+.page-container {
+    min-height: 100%;
+    width: 100%;
+    padding: 20px;
+    @include color(main-background);
+
+    @include mq(l) {
+        padding: 40px;
+    }
+}
+
+h1 {
+    font-size: 1.7rem;
+    padding: 20px 0 40px 0;
+    text-align: center;
+    @include color(heading-text, color);
+}
+
+h2 {
+    font-size: 1.4rem;
+    margin:0 0 20px 0;
+    text-align: center;
+}
+
+form {
+    height: 100%;
+    width: 100%;
+}
+
+.box-style {
+    padding: 30px;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    @include color(box-background);
+}
+
+.input-area {
+    width: 100%;
+    max-width: 594px;
+    margin: 0 auto;
+}
+
+.output-area {
+    min-width: 100%;
+    margin-top: 40px;
+    align-content: center;
+}
+
+.enter-email {
+    width: 300px;
+    margin: 20px 0;
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+
+    &:focus {
+        outline: none;
+        border: 1px solid rgba(0, 0, 0, 0.4);
+        box-shadow: 0 0 5px rgba(15, 118, 110, 0.5);
+    }
+}
+
+input::placeholder {
+    text-align: center;
+    @include color(normal-text, color);
+}
+
+.btn {
+    font-size: .9rem;
+    width: 150px;
+    margin: 5px;
+    padding: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    @include color(button-text, color);
+}
+
+.email-section {
+    width: 293px;
+    padding: 10px;
+    margin: 10px 10px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+    @include mq(l) {
+        width: 640px;
+    }
+}
+
+.email-heading {
+    font-size: 1.3rem;
+    text-decoration: 2px solid #3498DB;
+    margin: 20px 0;
+    text-align: center;
+    @include color(heading-text, color);
+}
+
+img {
+    padding: 5px;
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+}
+
+//////// Flex ////////
+
+.input-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.output-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.email-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.email-images {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+@include mq(m) {
+
+    #gallery {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}

@@ -1,0 +1,46 @@
+@use "sass:map"; // Required for map.has-key() and map.get()
+
+//// Maps ////
+
+$breakpoints: ( // Creates variables to be used in my map. 
+    s    : 480px,
+    m    : 768px,
+    l    : 992px,
+    xl   : 1260px
+);
+
+$colour-map: ( // Creates variables to be used in my map.
+  main-background   : #E1E5EA,
+  box-background    : #F1F0DE,
+  heading-text      : #1A1A1A,
+  normal-text       : #333333,
+  button-text       : #0F766E,
+  button-hover-text : #115E59
+);
+
+//// mixins ////
+
+// Media Queries //
+
+@mixin mq($size) { // I’m creating a mixin named mq, and it will take one input value. I’m calling that input $size.
+    @if map.has-key($breakpoints, $size) { // Checks if the provided $size exists as a key in the $breakpoints map.
+        $breakpoint-value: map.get($breakpoints, $size); // If the key exists, retrieve the pixel value associated with that key.
+        @media (min-width: $breakpoint-value) { // Start a media query using the retrieved breakpoint value.
+        @content; // The @content directive allows me to inject CSS where this mixin is used.
+        }
+    } @else {
+        @warn "No value found for breakpoint '#{$size}'."; // Else output a warning.
+    }
+}
+
+// Colour Pallet //
+
+@mixin color($colour, $property: background-color) { // I’m creating a mixin named colour which takes two input values. $colour will look up the colour in my maps, $property sets which CSS property I want to apply the colour to.
+  $colour-value: map.get($colour-map, $colour); // Tries to find the colour value that matches the $colour in the $colour-map.
+                                                // If a match is found, it returns the hex value.
+  @if $colour-value { // If a colour was found in the map
+    #{$property}: $colour-value; // Output a CSS property using the colour.
+  } @else {
+    @warn "Category "#{$colour}" not found in $colour-map map."; // Else output a warning.
+  }
+}

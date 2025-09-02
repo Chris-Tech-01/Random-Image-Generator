@@ -1,0 +1,82 @@
+@use "../base" as *;
+@use "../utilities" as *;
+@use "../vendors" as *;
+
+
+//// Debug Testing ////
+
+// * {
+//   outline: 1px solid red; // Visualise every element's box
+// }
+
+// .middle {
+//   border: 2px solid blue;
+// }
+
+// .container {
+//   border: 2px solid green;
+// }
+
+// body, html {
+//   margin: 0;
+//   padding: 0;
+// }
+
+
+
+//// Global layout ////
+
+* {
+    box-sizing: border-box; // Changes how an element's width and height are calculated. When set to border-box, the specified width and height include the element's content, padding, and borders.
+}
+
+//// Layout ////
+
+html, body {
+  height: 100%;
+}
+
+body {
+    font-size: 1rem;
+    letter-spacing: .4px;
+    margin: 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+h3 {
+    margin: 0;
+}
+
+.section {
+    padding: 50px 0px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+//////// Media Queries ////////
+
+.container {
+    margin-right: auto; // The space around an element's border.
+    margin-left: auto; // The space around an element's border.
+    margin-bottom: auto; // The space around an element's border.
+    padding-left: 15px; // Creates space between its content and its border.
+    padding-right: 15px; // Creates space between its content and its border.
+
+    @include mq(m) {
+        width: 750px; // Sets an element's width.
+    }
+
+    @include mq(l) {
+        width: 970px; // Sets an element's width.
+    }
+
+    @include mq(xl) {
+        width: 1200px; // Sets an element's width.
+    }
+}
